@@ -13,10 +13,11 @@ before_install:
 
 script:
   # Build Docker images for each service
-  - docker build --memory=4g --memory-swap=4g -t udagram-api-feed ./udagram-api-feed
-  - docker build --memory=4g --memory-swap=4g -t udagram-api-user ./udagram-api-user
-  - docker build --memory=4g --memory-swap=4g -t udagram-frontend ./udagram-frontend
-  - docker build --memory=4g --memory-swap=4g -t reverseproxy ./udagrem-reverseproxy
+  - docker build --memory=8g --memory-swap=8g -t udagram-api-feed ./udagram-api-feed
+  - docker build --memory=8g --memory-swap=8g -t reverseproxy ./udagram-reverseproxy
+  - docker build --memory=8g --memory-swap=8g -t udagram-frontend ./udagram-frontend
+  - docker build --memory=8g --memory-swap=8g -t udagram-api-user ./udagram-api-user
+
 
   # Tag Docker images
   - docker tag udagram-api-feed $DOCKER_USERNAME/udagram-api-feed:v1
