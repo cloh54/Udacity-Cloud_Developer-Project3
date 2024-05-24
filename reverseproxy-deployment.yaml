@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: cloh54/reverseproxy:v1
+        image: cloh54/reverseproxy:v2
         ports:
         - containerPort: 8080
         env:
