@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: postgres.c2pure370gry.us-east-1.rds.amazonaws.com
+  POSTGRES_PORT: "5432"
+  AWS_BUCKET: arn:aws:s3:::udacity-project3-bucket
+  AWS_REGION: us-east-1
+  URL: http://localhost:8100
+  NODE_OPTIONS: --openssl-legacy-provider
